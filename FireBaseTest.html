@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Your Web Form</title>
+</head>
+<body>
+<form id="submit-form">
+    <input type="text" id="name" placeholder="Your Name">
+    <input type="text" id="message" placeholder="Your Message">
+    <button type="submit">Submit</button>
+</form>
+<button id="load-btn">Load Messages</button>
+<div id="results"></div>
+
+<!-- Your Firebase scripts here as from Step 2 -->
+
+<script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-firestore.js"></script>
+<script>
+        var firebaseConfig = {
+            apiKey: "AIzaSyD2Qv-8dC9atWBU_IFWXmxsGSp5T-_FOtM",
+            authDomain: "sadhakacustomizer.firebaseapp.com",
+            projectId: "sadhakacustomizer",
+            storageBucket: "sadhakacustomizer.appspot.com",
+            messagingSenderId: "401905258509",
+            appId: "1:401905258509:web:cd9661bbe700b04fa00544"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+        var db = firebase.firestore();
+
+</script>
+
+<script>
+        // Handle form submission to Firestore
+        document.querySelector('#submit-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+
+            var name = document.querySelector('#name').value;
+            var message = document.querySelector('#message').value;
+
+            db.collection('messages').add({
+                name: name,
+                message: message
+            }).then(function(docRef) {
+                console.log('Document written with ID: ', docRef.id);
+                document.querySelector('#results').textContent = 'Message sent!';
+            }).catch(function(error) {
+                console.error('Error adding document: ', error);
+                document.querySelector('#results').textContent = 'Error sending message.';
+            });
+        });
+
+        // Handle click event of the load button
+        document.querySelector('#load-btn').addEventListener('click', function() {
+            db.collection('messages').get().then((querySnapshot) => {
+                querySnapshot.forEach((doc) => {
+                    var data = doc.data();
+                    var resultElement = document.querySelector('#results');
+                    resultElement.innerHTML += '<p>' + data.name + ': ' + data.message + '</p>';
+                });
+            });
+        });
+
+</script>
+</body>
+</html>

@@ -1,0 +1,24 @@
+{
+  "asanas": [
+    {
+      "name": "Trikonasana",
+      "description": "Stand with the head, neck, and trunk in a straight line, legs three feet apart. Inhaling,\nslowly raise the arms to shoulder level with the palms facing downward.\nTwist the trunk to the right. Exhaling, bring the left hand to the inside of the\nright foot, keeping the arms and the legs straight. The arms remain in line with\neach other, and the right arm extends straight up. Look up and back at the right\nhand.\nBreathe evenly; hold for 20 seconds.\nInhaling, slowly return to a standing position.\nRepeat, bringing the right hand to the inside of the left foot."
+    },
+    {
+      "name": "Tolasana",
+      "description": "Sit in padmasana.\nPlace the palms on the floor, fingers pointing forward.\nRaise the body and balance on the hands. Hold for 2-5 seconds.\nRepeat with the opposite leg on top."
+    },
+    {
+      "name": "Yogamudrasana",
+      "description": "Sit in padmasana (lotus posture).\nBring both arms behind the body and grasp the right wrist with the left hand.\nExhaling, slowly bend forward, stretching from the base of the spine. Rest the\nforehead on the floor.\nBreathe evenly; relax in this posture for 20-30 seconds.\nInhaling, slowly return to a sitting position.\nNOTE: The benefits of this posture depend on the heels pressing against the abdomen\nat the inside of the hip joints."
+    },
+    {
+      "name": "Virasana",
+      "description": "Position 1\nSit in a kneeling position with the knees together and feet beside the body so that\nthe buttocks rest on the floor. Keep the head, neck, and trunk straight.\nBreathe evenly; hold for 30 seconds.\nPosition 2\nKeeping the knees together, turn the feet outward so that the toes point away from\nthe body.\nBreathe evenly; hold for 30 seconds."
+    },
+    {
+      "name": "Vrikshasana",
+      "description": "Stand in the tree posture with the right foot in half lotus.\nReach behind the back with the right hand and grasp the foot.\nExtend the left arm forward keeping it parallel to the floor.\nBreathe evenly ; hold for 30 seconds.\nRepeat on the opposite side."
+    }
+  ]
+}
